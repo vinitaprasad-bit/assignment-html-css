@@ -1,0 +1,107 @@
+/* GENERAL STYLING */
+body{
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background:#f4f6fb;
+}
+
+/* CENTER CONTENT */
+section, header, footer{
+    max-width:1000px;
+    margin:auto;
+}
+
+/* HEADER */
+header{
+    background:#4a63e7;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+/* NAVBAR */
+nav{
+    background:#2d3bbf;
+    text-align:center;
+    padding:12px;
+}
+
+nav a{
+    color:white;
+    margin:15px;
+    text-decoration:none;
+    font-weight:500;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+/* SECTIONS */
+section{
+    background:white;
+    margin:20px auto;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* PROJECTS GRID */
+#projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+}
+
+#projects p{
+    background:#eef1ff;
+    padding:15px;
+    border-radius:8px;
+}
+
+/* CONTACT FORM */
+form{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+input, textarea{
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+
+button{
+    background:#4a63e7;
+    color:white;
+    border:none;
+    padding:10px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#2d3bbf;
+}
+
+/* FOOTER */
+footer{
+    background:#4a63e7;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:20px;
+}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+    nav a{
+        display:block;
+        margin:8px;
+    }
+
+    header{
+        padding:20px;
+    }
+}
