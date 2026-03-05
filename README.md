@@ -9,3 +9,46 @@ The <header> section displays the main introduction of the portfolio. It contain
 The website is divided into multiple <section> elements with unique IDs like "home", "about", and "projects". The Home section includes a short introduction paragraph and a list of hobbies using an ordered list (<ol>) with list items (<li>), such as Dancing and Engaging with children. The About section contains a paragraph describing the student’s educational background and enthusiasm for learning new things. The Projects section (and other sections if included) is meant to display academic or personal projects.
 
 Overall, this code represents a basic structured portfolio website using semantic HTML elements such as header, nav, and section. It demonstrates fundamental web development concepts including page structure, internal navigation using anchor tags, linking external stylesheets, and organizing content in a clear and readable format.
+
+ASSIGNMENT- 2 (DESCRIPTION)
+# Personal Portfolio Website
+
+This project is a simple **Personal Portfolio Website** created using **HTML, CSS, and JavaScript**. The purpose of this project is to present basic information about the developer, showcase projects, and allow users to interact with the webpage.
+
+## Features
+
+### 1. Hobby Interaction Enhancements
+
+The hobby section allows users to interact with the list dynamically.
+
+* Users can add a new hobby benefit using an input box and an **Add button**.
+* The entered text is added as a new item in the ordered list.
+* Each list item contains a **Delete button** that allows the user to remove that item from the list.
+
+### 2. Contact Form Interactivity
+
+The website contains a simple **Contact Form** where users can enter their name, email, and message.
+When the form is submitted, a **JavaScript alert message** appears confirming that the form has been submitted successfully.
+
+### 3. Dynamic Footer
+
+The footer of the webpage displays the **current date and time dynamically** using JavaScript.
+The time updates automatically every second.
+
+## Technologies Used
+
+* HTML – For structuring the webpage
+* CSS – For styling and layout
+* JavaScript – For adding interactivity and dynamic behavior
+
+## Project Sections
+
+* Home
+* About
+* Projects
+* Contact
+* Dynamic Footer
+
+## Purpose of the Project
+
+This project was created as part of a **web development assignment** to practice the integration of **HTML structure, CSS styling, and JavaScript functionality** in a single webpage.
