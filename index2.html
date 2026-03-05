@@ -1,0 +1,143 @@
+<html>
+<head>
+<title>My portfolio</title>
+<link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+<h1>VINITA PRASAD</h1>
+<p>A BCA student passionate about learning web development.</p>
+</header>
+
+<nav>
+<a href="#home">HOME</a>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<section id="home">
+<p>I love exploring things, being a coder student I am understanding the deepness of coding.</p>
+
+<h3>My Hobby:</h3>
+
+<ol id="hobbyList">
+<li>Dancing</li>
+<li>Engaging with childrens</li>
+</ol>
+
+<input type="text" id="hobbyInput" placeholder="Add hobby benefit">
+<button onclick="addHobby()">Add</button>
+
+</section>
+
+<section id="about">
+<p>I am a BCA student in a learning environment and enthusiastically waiting for new things to happen.</p>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+<p>Calculator using Java</p>
+<p>College Poster Design</p>
+<p>Personal Blogging</p>
+</section>
+
+<section id="contact">
+<h2>Contact Me</h2>
+
+<form onsubmit="return submitForm()">
+<input placeholder="Name"><br>
+<input placeholder="Email"><br>
+<textarea placeholder="Message"></textarea><br>
+<button type="submit">Submit</button>
+</form>
+
+</section>
+
+<footer>
+<p>Connect with me on</p>
+
+<a href="https://linkedin.com">LinkedIn</a>
+<p>and</p>
+<a href="https://github.com/vinitaprasad-bit/assignment-html-css">GitHub</a>
+
+<p id="dateTime"></p>
+
+</footer>
+
+<script>
+
+// Function to add delete button to every list item
+function addDeleteButton(li){
+
+let deleteBtn = document.createElement("button");
+deleteBtn.textContent = " Delete";
+
+deleteBtn.onclick = function(){
+li.remove();
+};
+
+li.appendChild(deleteBtn);
+
+}
+
+
+// Add Hobby Item
+function addHobby(){
+
+let input = document.getElementById("hobbyInput");
+let text = input.value;
+
+if(text === "") return;
+
+let li = document.createElement("li");
+li.textContent = text;
+
+addDeleteButton(li);
+
+document.getElementById("hobbyList").appendChild(li);
+
+input.value = "";
+
+}
+
+
+// Add delete buttons to existing list items
+window.onload = function(){
+
+let items = document.querySelectorAll("#hobbyList li");
+
+items.forEach(function(li){
+addDeleteButton(li);
+});
+
+showDateTime();
+
+}
+
+
+// Contact Form Alert
+function submitForm(){
+alert("Form submitted successfully!");
+return true;
+}
+
+
+// Dynamic Date and Time
+function showDateTime(){
+
+let now = new Date();
+
+document.getElementById("dateTime").innerHTML =
+now.toLocaleString();
+
+}
+
+setInterval(showDateTime,1000);
+
+</script>
+
+</body>
+</html>
