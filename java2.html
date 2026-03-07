@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>Task 2</title>
+</head>
+
+<body>
+<h2>Return Unique Elements</h2>
+<p id="output"></p>
+
+<script>
+
+function uniqueElements(arr1, arr2) {
+
+let combined = arr1.concat(arr2);
+let unique = [];
+
+for (let i = 0; i < combined.length; i++) {
+
+    if (!unique.includes(combined[i])) {
+        unique.push(combined[i]);
+    }
+
+}
+
+return unique;
+
+}
+let array1 = [12,13,14,15];
+let array2 = [13,14,16,17];
+let result = uniqueElements(array1, array2);
+document.getElementById("output").innerHTML =
+"Unique Elements: " + result;
+</script>
+</body>
+</html>
