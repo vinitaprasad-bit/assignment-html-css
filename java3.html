@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>Task 3</title>
+</head>
+
+<body>
+
+<h2>Student Score Analysis</h2>
+<p id="student"></p>
+<script>
+let students = [
+ { name: 'VINITA', age: 19, scores: [78,85,92] },
+ { name: 'RITIKA', age: 20, scores: [88,90,76] },
+ { name: 'KIRAN', age: 21, scores: [95,80,85] }
+];
+
+let topStudent = "";
+let highestAverage = 0;
+for (let i = 0; i < students.length; i++) {
+let scores = students[i].scores;
+let sum = 0;
+for (let j = 0; j < scores.length; j++) {
+    sum += scores[j];
+}
+let average = sum / scores.length;
+
+if (average > highestAverage) {
+    highestAverage = average;
+    topStudent = students[i].name;
+}
+
+}
+document.getElementById("student").innerHTML =
+"Top Student: " + topStudent + " with average score of " + highestAverage;
+</script>
+</body>
+</html>
