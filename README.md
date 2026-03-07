@@ -52,3 +52,26 @@ The time updates automatically every second.
 ## Purpose of the Project
 
 This project was created as part of a **web development assignment** to practice the integration of **HTML structure, CSS styling, and JavaScript functionality** in a single webpage.
+**ASSIGNMENT-3**
+**Task 1: Find Second Largest Number**
+
+This task focuses on finding the second largest number from a given array without sorting the array. An array of numbers is created and a loop is used to traverse through each element. During the iteration, two variables are maintained to store the largest and the second largest values. Whenever a number greater than the current largest value is found, the previous largest value becomes the second largest. If the number is smaller than the largest but greater than the second largest, it replaces the second largest value. This approach helps in efficiently finding the second largest number in a single pass through the array without using any sorting method. The final result is displayed on the webpage.
+
+---
+
+**Task 2: Return Unique Elements**
+
+This task involves creating a function that takes two arrays as input and returns a new array containing only the unique elements from both arrays. The arrays are first combined together, and then a loop is used to check each element. If the element is not already present in the new array, it is added to it. This ensures that duplicate values are removed and only unique elements remain. The final array with unique values is then displayed as the output.
+
+---
+
+**Task 3: Student Score Analysis**
+
+In this task, an array of student objects is created where each object contains the student's name, age, and an array of their scores. A function is implemented to calculate the average score for each student by adding all the scores and dividing by the number of subjects. After calculating the averages, the program compares them to determine which student has the highest average score. Finally, the program logs and displays the top student along with their average score.
+
+---
+
+**Task 4: Countdown Timer**
+
+This task involves building a one-hour countdown timer using HTML, CSS, and JavaScript. The timer displays time in minutes and seconds (MM:SS format). Buttons are provided to start, pause, and reset the timer. JavaScript is used to control the timer logic using functions and intervals. The timer counts down every second until it reaches zero, and it prevents the timer from going into negative values. When the countdown reaches zero, a message is displayed to inform the user that the time is up.
+
