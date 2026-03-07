@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>Task 1</title>
+</head>
+<body>
+<h2>Find Second Largest Number</h2>
+<p id="result"></p>
+<script>
+let arr = [23, 45, 67, 89, 12, 90, 44];
+
+let largest = -Infinity;
+let secondLargest = -Infinity;
+
+for (let i = 0; i < arr.length; i++) {
+
+    if (arr[i] > largest) {
+        secondLargest = largest;
+        largest = arr[i];
+    }
+
+    else if (arr[i] > secondLargest && arr[i] != largest) {
+        secondLargest = arr[i];
+    }
+
+}
+document.getElementById("result").innerHTML =
+"Second Largest Number is: " + secondLargest;
+
+</script>
+</body>
+</html>
