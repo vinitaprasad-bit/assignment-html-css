@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Interactive FAQ</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Frequently Asked Questions</h1>
+
+<div id="faq-container"></div>
+
+<script>
+
+class QAItem {
+
+    constructor(question, answer){
+        this.question = question;
+        this.answer = answer;
+    }
+
+    render(){
+
+        const container = document.createElement("div");
+        container.classList.add("qa-item");
+
+        const questionEl = document.createElement("div");
+        questionEl.classList.add("question");
+        questionEl.textContent = this.question;
+
+        const answerEl = document.createElement("div");
+        answerEl.classList.add("answer");
+        answerEl.textContent = this.answer;
+
+        questionEl.addEventListener("click", () => {
+            container.classList.toggle("active");
+        });
+
+        container.appendChild(questionEl);
+        container.appendChild(answerEl);
+
+        return container;
+    }
+}
+
+const faqList = [
+    new QAItem(
+        "What is HTML?",
+        "HTML stands for HyperText Markup Language and is used to structure web pages."
+    ),
+    new QAItem(
+        "What is CSS?",
+        "CSS stands for Cascading Style Sheets and is used to style and design web pages."
+    ),
+    new QAItem(
+        "What is JavaScript?",
+        "JavaScript is a programming language used to add interactivity and dynamic behavior to websites."
+    )
+];
+
+const faqContainer = document.getElementById("faq-container");
+
+faqList.forEach(item => {
+    faqContainer.appendChild(item.render());
+});
+
+</script>
+
+</body>
+</html>
